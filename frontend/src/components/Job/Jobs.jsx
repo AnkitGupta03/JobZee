@@ -10,7 +10,7 @@ const Jobs = () => {
   useEffect(() => {
     try {
       axios
-        .get("import.meta.env.BACKEND_URL/api/v1/job/getall", {
+        .get("https://jobzee-gavg.onrender.com/api/v1/job/getall", {
           withCredentials: true,
         })
         .then((res) => {

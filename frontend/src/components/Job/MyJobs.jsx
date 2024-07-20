@@ -17,7 +17,7 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-          "import.meta.env.BACKEND_URL/api/v1/job/getmyjobs",
+          "https://jobzee-gavg.onrender.com/api/v1/job/getmyjobs",
           { withCredentials: true }
         );
         setMyJobs(data.myJobs);
@@ -48,7 +48,7 @@ const MyJobs = () => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     await axios
       .put(
-        `import.meta.env.BACKEND_URL/api/v1/job/update/${jobId}`,
+        `https://jobzee-gavg.onrender.com/api/v1/job/update/${jobId}`,
         updatedJob,
         {
           withCredentials: true,
@@ -66,7 +66,7 @@ const MyJobs = () => {
   //Function For Deleting Job
   const handleDeleteJob = async (jobId) => {
     await axios
-      .delete(`import.meta.env.BACKEND_URL/api/v1/job/delete/${jobId}`, {
+      .delete(`https://jobzee-gavg.onrender.com/api/v1/job/delete/${jobId}`, {
         withCredentials: true,
       })
       .then((res) => {

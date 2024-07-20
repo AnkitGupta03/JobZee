@@ -19,7 +19,7 @@ const MyApplications = () => {
       if (user && user.role === "Employer") {
         axios
           .get(
-            "import.meta.env.BACKEND_URL/api/v1/application/employer/getall",
+            "https://jobzee-gavg.onrender.com/api/v1/application/employer/getall",
             {
               withCredentials: true,
             }
@@ -30,7 +30,7 @@ const MyApplications = () => {
       } else {
         axios
           .get(
-            "import.meta.env.BACKEND_URL/api/v1/application/jobseeker/getall",
+            "https://jobzee-gavg.onrender.com/api/v1/application/jobseeker/getall",
             {
               withCredentials: true,
             }
@@ -51,9 +51,12 @@ const MyApplications = () => {
   const deleteApplication = (id) => {
     try {
       axios
-        .delete(`import.meta.env.BACKEND_URL/api/v1/application/delete/${id}`, {
-          withCredentials: true,
-        })
+        .delete(
+          `https://jobzee-gavg.onrender.com/api/v1/application/delete/${id}`,
+          {
+            withCredentials: true,
+          }
+        )
         .then((res) => {
           toast.success(res.data.message);
           setApplications((prevApplication) =>

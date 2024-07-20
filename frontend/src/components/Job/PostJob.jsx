@@ -31,7 +31,7 @@ const PostJob = () => {
     }
     await axios
       .post(
-        "import.meta.env.BACKEND_URL/api/v1/job/post",
+        "https://jobzee-gavg.onrender.com/api/v1/job/post",
         fixedSalary.length >= 4
           ? {
               title,

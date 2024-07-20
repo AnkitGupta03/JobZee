@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "import.meta.env.BACKEND_URL/api/v1/user/register",
+        "https://jobzee-gavg.onrender.com/api/v1/user/register",
         { name, phone, email, role, password },
         {
           headers: {

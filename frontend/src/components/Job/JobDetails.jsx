@@ -12,7 +12,7 @@ const JobDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`import.meta.env.BACKEND_URL/api/v1/job/${id}`, {
+      .get(`https://jobzee-gavg.onrender.com/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {

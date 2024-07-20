@@ -35,7 +35,7 @@ const Application = () => {
 
     try {
       const { data } = await axios.post(
-        "import.meta.env.BACKEND_URL/api/v1/application/post",
+        "https://jobzee-gavg.onrender.com/api/v1/application/post",
         formData,
         {
           withCredentials: true,
