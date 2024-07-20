@@ -18,17 +18,23 @@ const MyApplications = () => {
     try {
       if (user && user.role === "Employer") {
         axios
-          .get("http://localhost:4000/api/v1/application/employer/getall", {
-            withCredentials: true,
-          })
+          .get(
+            "import.meta.env.BACKEND_URL/api/v1/application/employer/getall",
+            {
+              withCredentials: true,
+            }
+          )
           .then((res) => {
             setApplications(res.data.applications);
           });
       } else {
         axios
-          .get("http://localhost:4000/api/v1/application/jobseeker/getall", {
-            withCredentials: true,
-          })
+          .get(
+            "import.meta.env.BACKEND_URL/api/v1/application/jobseeker/getall",
+            {
+              withCredentials: true,
+            }
+          )
           .then((res) => {
             setApplications(res.data.applications);
           });
@@ -45,7 +51,7 @@ const MyApplications = () => {
   const deleteApplication = (id) => {
     try {
       axios
-        .delete(`http://localhost:4000/api/v1/application/delete/${id}`, {
+        .delete(`import.meta.env.BACKEND_URL/api/v1/application/delete/${id}`, {
           withCredentials: true,
         })
         .then((res) => {
