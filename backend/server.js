@@ -1,7 +1,5 @@
 import app from "./app.js";
 import cloudinary from "cloudinary";
-const express = require('express');
-const app = express();
 
 cloudinary.v2.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
