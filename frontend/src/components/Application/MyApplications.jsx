@@ -19,7 +19,7 @@ const MyApplications = () => {
       if (user && user.role === "Employer") {
         axios
           .get(
-            "https://jobzee-gavg.onrender.com/api/v1/application/employer/getall",
+            "https://jobzee-tlrk.onrender.com/api/v1/application/employer/getall",
             {
               withCredentials: true,
             }
@@ -30,7 +30,7 @@ const MyApplications = () => {
       } else {
         axios
           .get(
-            "https://jobzee-gavg.onrender.com/api/v1/application/jobseeker/getall",
+            "https://jobzee-tlrk.onrender.com/api/v1/application/jobseeker/getall",
             {
               withCredentials: true,
             }
@@ -52,7 +52,7 @@ const MyApplications = () => {
     try {
       axios
         .delete(
-          `https://jobzee-gavg.onrender.com/api/v1/application/delete/${id}`,
+          `https://jobzee-tlrk.onrender.com/api/v1/application/delete/${id}`,
           {
             withCredentials: true,
           }
