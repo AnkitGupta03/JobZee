@@ -38,7 +38,7 @@ const Application = () => {
         "https://jobzee-tlrk.onrender.com/api/v1/application/post",
         formData,
         {
-          withCredentials: true,
+           
           headers: {
             "Content-Type": "multipart/form-data",
           },

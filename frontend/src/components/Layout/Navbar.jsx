@@ -15,7 +15,7 @@ const Navbar = () => {
       const response = await axios.get(
         "https://jobzee-tlrk.onrender.com/api/v1/user/logout",
         {
-          withCredentials: true,
+           
         }
       );
       toast.success(response.data.message);

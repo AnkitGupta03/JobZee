@@ -24,7 +24,7 @@ const Login = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+           
         }
       );
       toast.success(data.message);
@@ -32,6 +32,7 @@ const Login = () => {
       setPassword("");
       setRole("");
       setIsAuthorized(true);
+      setUser(data.user);
     } catch (error) {
       toast.error(error.response.data.message);
     }

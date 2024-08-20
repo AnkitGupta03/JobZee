@@ -11,7 +11,7 @@ const Jobs = () => {
     try {
       axios
         .get("https://jobzee-tlrk.onrender.com/api/v1/job/getall", {
-          withCredentials: true,
+           
         })
         .then((res) => {
           setJobs(res.data);
