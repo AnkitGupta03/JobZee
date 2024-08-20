@@ -34,7 +34,7 @@ const App = () => {
         setIsAuthorized(false);
       }
     };
-    fetchUser();
+    // fetchUser();
   }, [isAuthorized]);
 
   return (
