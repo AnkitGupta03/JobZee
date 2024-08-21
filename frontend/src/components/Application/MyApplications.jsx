@@ -21,7 +21,7 @@ const MyApplications = () => {
           .get(
             "https://jobzee-tlrk.onrender.com/api/v1/application/employer/getall",
             {
-               
+              withCredentials: true,
             }
           )
           .then((res) => {
@@ -32,7 +32,7 @@ const MyApplications = () => {
           .get(
             "https://jobzee-tlrk.onrender.com/api/v1/application/jobseeker/getall",
             {
-               
+              withCredentials: true,
             }
           )
           .then((res) => {
@@ -54,7 +54,7 @@ const MyApplications = () => {
         .delete(
           `https://jobzee-tlrk.onrender.com/api/v1/application/delete/${id}`,
           {
-             
+            withCredentials: true,
           }
         )
         .then((res) => {

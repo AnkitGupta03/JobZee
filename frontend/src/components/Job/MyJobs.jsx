@@ -51,7 +51,7 @@ const MyJobs = () => {
         `https://jobzee-tlrk.onrender.com/api/v1/job/update/${jobId}`,
         updatedJob,
         {
-           
+          withCredentials: true,
         }
       )
       .then((res) => {
@@ -67,7 +67,7 @@ const MyJobs = () => {
   const handleDeleteJob = async (jobId) => {
     await axios
       .delete(`https://jobzee-tlrk.onrender.com/api/v1/job/delete/${jobId}`, {
-         
+        withCredentials: true,
       })
       .then((res) => {
         toast.success(res.data.message);

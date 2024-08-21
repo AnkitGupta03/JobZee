@@ -53,7 +53,7 @@ const PostJob = () => {
               salaryTo,
             },
         {
-           
+          withCredentials: true,
           headers: {
             "Content-Type": "application/json",
           },
